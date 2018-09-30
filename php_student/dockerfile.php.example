@@ -1,7 +1,8 @@
-#python-nginx-uwsgi
+#dockerfile.php.example
+#
 #docker build --rm -t php:latest -f ./dockerfile.php.example .
 #USAGE:   
-#   docker run --name py -it -d python:latest
+#   docker run --name py -it -d php:latest
 #   docker exec -it py bash
 #
 FROM centos:latest
