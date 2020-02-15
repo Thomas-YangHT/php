@@ -1,0 +1,10 @@
+FROM php:5.6-alpine3.8
+RUN echo  'http://mirrors.ustc.edu.cn/alpine/v3.8/main'> /etc/apk/repositories && \
+    echo  'http://mirrors.ustc.edu.cn/alpine/v3.8/community' >>/etc/apk/repositories && \
+    cat /etc/apk/repositories
+RUN apk add  --no-cache  nginx php5-mysql spawn-fcgi tzdata && \
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+COPY . /php
+WORKDIR  /php
+CMD [ '/bin/sh' ]
+

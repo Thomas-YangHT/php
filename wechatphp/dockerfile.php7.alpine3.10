@@ -1,0 +1,14 @@
+#php
+FROM alpine:3.10
+RUN  \
+#echo  'http://mirrors.ustc.edu.cn/alpine/v3.10/main'> /etc/apk/repositories && \
+#echo  'http://mirrors.ustc.edu.cn/alpine/v3.10/community' >>/etc/apk/repositories && \
+echo  'http://mirrors.tuna.tsinghua.edu.cn/alpine/v3.10/main'> /etc/apk/repositories && \
+echo  'http://mirrors.tuna.tsinghua.edu.cn/alpine/v3.10/community' >>/etc/apk/repositories && \
+cat /etc/apk/repositories && \
+apk add  --no-cache nginx php7 php7-mysqlnd spawn-fcgi
+COPY . /php
+WORKDIR /php
+RUN  ls -l && chmod a+x startphp.sh
+CMD ["/uwsgi/startphp.sh"]
+
