@@ -1,0 +1,1 @@
+curl --insecure -i -X GET "https://system.cyea.org.cn/php?token=weixin&echostr=test&nonce=123&timestamp=1411034505&signature=69a879492e46fcc27a4f6129e4d962d957acd72b"

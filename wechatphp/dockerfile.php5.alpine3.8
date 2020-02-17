@@ -6,5 +6,6 @@ RUN apk add  --no-cache  nginx php5-mysql spawn-fcgi tzdata && \
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 COPY . /php
 WORKDIR  /php
+RUN php -l *php
 CMD [ '/bin/sh' ]
 

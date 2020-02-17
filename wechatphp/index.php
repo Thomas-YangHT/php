@@ -8,18 +8,22 @@ header('Content-type:text');
 define("TOKEN", "weixin");
 
 $help="请输入要查询的命令：\n===================\n如: ls ---返回用法链接\n";
-$help.="命令总结 :-----<a href='https://mubu.com/doc/3xyI7zD_Yo'>CheetSheet</a>\n";
-$help.="简单述语 :--<a href='https://mubu.com/doc/3u65WbvQsp'>ComputerWords</a>\n";		
-$help.="shell :----<a href='https://mubu.com/doc/3y4NwBXCxo'>简述shell流程控制</a>\n";
-$help.="安装源 :----<a href='https://mubu.com/doc/2-KsPtqeKo'>国内安装源总结</a>\n";
-$help.="网络故障 :----<a href='https://mubu.com/doc/2d8bwNidNo'>简述网络排障</a>\n";	
-$help.="运维 :----<a href='https://mubu.com/doc/2wPYi23fso'>简述运维操作工具</a>\n";	
-$help.="文档 :----<a href='https://mubu.com/doc/3Q14_dh4Go'>markdown文档工具</a>\n";	
-$help.="性能 :-----<a href='https://mubu.com/doc/3FM8gqgzro'>简述web性能优化</a>\n";	
-$help.="公众号 :-----<a href='https://mubu.com/doc/3DOZgQxGwo'>简述微信号开发</a>\n";	
-$help.="测试 :---<a href='https://mubu.com/doc/3mtscGgyIo'>简述测试概念与工具</a>\n";			
-$help.="IT图 :--------------<a href='https://mubu.com/doc/LYdGMKtto'>IT架构图</a>\n";
-$help.="微信图文 :---------<a href='https://mp.weixin.qq.com/mp/homepage?__biz=Mzg4MjAyMDgzMQ==&hid=1&sn=ce7139573c267c56ae45f026c4242045'>往期目录</a>\n";
+$help.="001-<a href='https://mubu.com/doc/3xyI7zD_Yo'>CmdCheetSheet</a>\n";
+$help.="002-<a href='https://mubu.com/doc/3u65WbvQsp'>SimpleComputerWords</a>\n";		
+$help.="003-<a href='https://mubu.com/doc/3y4NwBXCxo'>简述shell流程控制</a>\n";
+$help.="004-<a href='https://mubu.com/doc/2-KsPtqeKo'>国内安装源总结</a>\n";
+$help.="005-<a href='https://mubu.com/doc/2d8bwNidNo'>简述网络排障</a>\n";	
+$help.="006-<a href='https://mubu.com/doc/2wPYi23fso'>简述运维操作工具</a>\n";	
+$help.="007-<a href='https://mubu.com/doc/3Q14_dh4Go'>markdown文档工具</a>\n";	
+$help.="008-<a href='https://mubu.com/doc/3FM8gqgzro'>简述web应用性能优化</a>\n";	
+$help.="009-<a href='https://mubu.com/doc/3DOZgQxGwo'>简述微信公众号开发</a>\n";	
+$help.="010-<a href='https://mubu.com/doc/3mtscGgyIo'>简述测试概念与工具</a>\n";			
+$help.="011-<a href='https://mubu.com/doc/LYdGMKtto'>IT架构图</a>\n";
+$help.="012-<a href='https://mp.weixin.qq.com/mp/homepage?__biz=Mzg4MjAyMDgzMQ==&hid=1&sn=ce7139573c267c56ae45f026c4242045'>LinuxMan往期目录</a>\n\n";
+$help.="CloudMan 每天5分钟系列：\n";
+$help.="<a href='https://mp.weixin.qq.com/s/7o8QxGydMTUe4Q7Tz46Diw'>[Docker教程]</a>\n";
+$help.="<a href='https://mp.weixin.qq.com/s/RK6DDc8AUBklsUS7rssW2w'>[Kubernetes教程]</a>\n";
+$help.="<a href='https://mp.weixin.qq.com/s/QtdMkt9giEEnvFTQzO9u7g'>[OpenStack教程]</a>\n";
 
 		
 $wechatObj = new wechatCallbackapiTest();
@@ -112,7 +116,7 @@ class wechatCallbackapiTest
         switch ($object->Event)
         {
             case "subscribe":
-                $content = "欢迎关注LinuxMan \n请输入要查询的命令，如ls\n";
+                $content = "欢迎关注LinuxMan \n";
 				global $help;
 				$content .= $help;
                 if (!empty($object->EventKey)){
@@ -223,9 +227,9 @@ class wechatCallbackapiTest
             $content = array();
             $content = array("Title"=>"最炫民族风", "Description"=>"歌手：凤凰传奇", "MusicUrl"=>"http://mascot-music.stor.sinaapp.com/zxmzf.mp3", "HQMusicUrl"=>"http://mascot-music.stor.sinaapp.com/zxmzf.mp3");
         }else{
-            $content = "链接一：<a href='https://jaywcjlove.gitee.io/linux-command/c/".$keyword.".html'>".$keyword."</a>\n";
-			$content .= "链接二：<a href='https://www.linuxcool.com/".$keyword."'>".$keyword."</a>\n";
-			$content .= "链接三：<a href='https://man.linuxde.net/".$keyword."'>".$keyword."</a>";
+            $content = "Link1：<a href='https://jaywcjlove.gitee.io/linux-command/c/".$keyword.".html'>".$keyword."</a>\n";
+			$content .= "Link2：<a href='https://www.linuxcool.com/".$keyword."'>".$keyword."</a>\n";
+			$content .= "Link3：<a href='https://man.linuxde.net/".$keyword."'>".$keyword."</a>";
 			// $content = "";
         }
 
