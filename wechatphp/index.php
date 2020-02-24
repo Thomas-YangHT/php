@@ -19,8 +19,10 @@ $help.="008-<a href='https://mubu.com/doc/3FM8gqgzro'>简述web应用性能优�
 $help.="009-<a href='https://mubu.com/doc/3DOZgQxGwo'>简述微信公众号开发</a>\n";	
 $help.="010-<a href='https://mubu.com/doc/3mtscGgyIo'>简述测试概念与工具</a>\n";			
 $help.="011-<a href='https://mubu.com/doc/LYdGMKtto'>IT架构图</a>\n";
-$help.="012-<a href='https://mp.weixin.qq.com/mp/homepage?__biz=Mzg4MjAyMDgzMQ==&hid=1&sn=ce7139573c267c56ae45f026c4242045'>LinuxMan往期目录</a>\n\n";
-$help.="CloudMan 每天5分钟系列：\n";
+$help.="012-<a href='https://mp.weixin.qq.com/mp/homepage?__biz=Mzg4MjAyMDgzMQ==&hid=1&sn=ce7139573c267c56ae45f026c4242045'>LinuxMan往期目录</a>\n";
+$help.="013-<a href='https://mubu.com/doc/3uK_TGfrXo'>解决故障[更新中]</a>\n";
+$help.="014-<a href='https://mubu.com/doc/1XiLnBztCo'>K8S启动盘使用帮助</a>\n";
+$help.="\nCloudMan 每天5分钟系列：\n";
 $help.="<a href='https://mp.weixin.qq.com/s/7o8QxGydMTUe4Q7Tz46Diw'>[Docker教程]</a>\n";
 $help.="<a href='https://mp.weixin.qq.com/s/RK6DDc8AUBklsUS7rssW2w'>[Kubernetes教程]</a>\n";
 $help.="<a href='https://mp.weixin.qq.com/s/QtdMkt9giEEnvFTQzO9u7g'>[OpenStack教程]</a>\n";
